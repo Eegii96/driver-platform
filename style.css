@@ -222,3 +222,70 @@ body {
     color: #22C55E;
     margin-top: 8px;
 }
+.jobs-container {
+    padding: 88px 40px 40px 40px;
+}
+
+.jobs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.jobs-header h2 {
+    font-size: 24px;
+    color: #1A1A2E;
+    font-weight: bold;
+}
+
+.job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.job-item {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.job-info h3 {
+    font-size: 16px;
+    color: #1A1A2E;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.job-info p {
+    font-size: 14px;
+    color: #64748B;
+    margin-top: 4px;
+}
+
+.job-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.apply-btn {
+    background: #0057B8;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.apply-btn:hover {
+    background: #0046A0;
+}

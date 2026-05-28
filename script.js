@@ -1,16 +1,30 @@
-// Жолооч/Ажил олгогч сонгох
-const roleBtns = document.querySelectorAll('.role-btn');
+import { supabase } from './supabase.js'
+
+const roleBtns = document.querySelectorAll('.role-btn')
 roleBtns.forEach(btn => {
     btn.addEventListener('click', function() {
-        roleBtns.forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-    });
-});
+        roleBtns.forEach(b => b.classList.remove('active'))
+        this.classList.add('active')
+    })
+})
 
-// ДАН товч бүхэнд
-const danBtns = document.querySelectorAll('.dan-button');
+const danBtns = document.querySelectorAll('.dan-button')
 danBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-        alert('ДАН системтэй холбогдож байна...');
-    });
-});
+    btn.addEventListener('click', async function() {
+        const activeRole = document.querySelector('.role-btn.active')
+        if (activeRole) {
+            const role = activeRole.textContent === 'Жолооч' ? 'driver' : 'employer'
+            const { data, error } = await supabase
+                .from('users')
+                .insert([{ user_role: role, verified: false }])
+            if (error) {
+                alert('Алдаа: ' + error.message)
+            } else {
+                alert('Бүртгэл амжилттай!')
+                window.location.href = 'profile.html'
+            }
+        } else {
+            alert('Жолооч эсвэл Ажил олгогч сонгоно уу!')
+        }
+    })
+})

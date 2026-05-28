@@ -289,3 +289,23 @@ body {
 .apply-btn:hover {
     background: #0046A0;
 }
+.nav-link {
+    color: #FFFFFF;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.nav-button-link {
+    background: #FFFFFF;
+    color: #0057B8;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
